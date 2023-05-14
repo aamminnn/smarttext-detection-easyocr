@@ -27,7 +27,7 @@ def X(img_name, coordinate, expected_text)
     [2] implement live video
 
 """
-image_filename = glob('real_images/*')
+image_filename = glob('real_images/*') #takes image from real_images folder
 
 def smarttext(image_filename, expected_text:list):
     for image_filename in tqdm(image_filename):
@@ -56,8 +56,9 @@ def smarttext(image_filename, expected_text:list):
         if not found_match:
             print(f'No match found for {items} in results. FAIL')
         
-
+"""
 smarttext(
     image_filename = image_filename, 
-    expected_text = ['BRAVIA VU31','Android TV OS version']
+    expected_text = ['Your expected text']
 )
+"""
